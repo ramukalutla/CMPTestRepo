@@ -1,0 +1,81 @@
+<template>
+        <div class="maindiv" style={backgroundStyle}>
+            <h1 class="welcome">
+                Welcome, <br />
+                <p class="content"><b>John Smith</b></p>
+            </h1>
+            <p>
+                Here you have easy access to all your claims information.You can<br />
+                review details,check status or see payments by clicking on any<br />
+                claim number in the table below. You can also submit a new claim
+            </p>
+            <br />
+            <lightning-layout horizontal-align="spread" multiple-rows="true">
+                <lightning-layout-item flexibility="grow" size="12" small-device-size="4" medium-device-size="4" large-device-size="4">
+                    <button class="submitclaim-btn" onclick={submitClaim}>SUBMIT A CLAIM</button>
+                </lightning-layout-item>
+            </lightning-layout>
+            <br /><br />
+            <lightning-layout>
+                <h3>{count} &nbsp;&nbsp;{value}</h3>
+                &nbsp;&nbsp;&nbsp;
+        
+     <select class="dropdown" name="all claims"  onchange={handleClaims}>
+            <template for:each={values} for:item="opt">
+               <option  key={opt.key} value={opt.value} >{opt.value}</option>
+            </template>
+       </select>
+    
+      
+            </lightning-layout>
+            <br /><br />
+    
+            <template if:false={flag}>
+                <template for:each={openClaims} for:item="claim">
+                    <div  key={claim}>
+                            <lightning-layout-item flexibility="grow" size="12" small-device-size="4" medium-device-size="4" large-device-size="4">
+                            <lightning-tile class="example" variant="brand">
+                            <div class="card1">
+                                <div class="slds-grid slds-gutters">
+    
+                                    <div onclick={claimClick} class=" slds-align_absolute-center slds-col slds-size_1-of-5 claimpart">
+                                        <center>
+                                            <p>CLAIM#<br /><b>{claim.claimNumber}</b></p>
+                                        </center>
+                                    </div>
+    
+                                    <div class=" slds-size_1-of-5 divcontent ">
+                                        <center>
+                                            <p class="heading">Property Address</p>
+                                            <p>{claim.property}</p>
+                                            <p>{claim.street}</p>
+                                            <p>{claim.zipCode}</p>
+                                        </center>
+                                    </div>
+                                    <div class="slds-size_1-of-5 divcontent">
+                                        <center>
+                                            <p class="heading">Policy type</p>
+                                            <p>{claim.policyType}</p>
+                                        </center>
+                                    </div>
+                                    <div class=" slds-size_1-of-5 divcontent">
+                                        <center>
+                                            <p class="heading">Date of Loss</p>
+                                            <p>{claim.lossDate}</p>
+                                        </center>
+                                    </div>
+                                    <div class=" slds-size_1-of-5 divcontent">
+                                        <center>
+                                            <p class="heading"><img src={notification}/>Notification</p>
+                                            <p>the claim have been credited to your bank account</p>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-tile><br />
+                        </lightning-layout-item>
+                   </div>
+                </template>
+            </template>
+        </div>
+    </template>

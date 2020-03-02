@@ -1,0 +1,254 @@
+.submitclaim-btn {
+    font-family: "Slate Pro Medium";
+    border: none;
+    margin-left: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    border-radius: 5px;
+    background-image: linear-gradient(#cc0000 50%, #990000 50%);
+  }
+  .claim_table{
+     border:none;
+     border-spacing: 0;
+     border-width: 0;
+     padding: 0;
+     border-width: 0;
+  }
+  .claim_heading{
+    background-color: white;
+  }
+  .values {
+    font-size: 16px;
+    font-family: "Slate Pro Medium";
+  }
+  .claim-number {
+    font-size: 20px;
+    font-family: "Slate Pro Medium";
+  }
+  .add-claim-btn {
+    font-size: 11.429px;
+    font-family: "Slate Pro Medium";
+  }
+  a:link {
+    text-decoration: none;
+  }
+  .back_to_my_account_homepage {
+    font-family: "Slate Pro Medium";
+    font-size: 16px;
+    text-decoration: none;
+    color: #000080;
+    margin-left: 30px;
+  }
+  .welcome {
+    font-family: "Slate Pro Medium";
+    font-size: 40px;
+    margin-left: 30px;
+    color: #000080;
+  }
+  .view-claims {
+    color: #4da6ff;
+  }
+  .link {
+    border-left: 1px solid gray;
+    height: 15px;
+  }
+  .content {
+    font-family: "Slate Pro Medium";
+    font-size: 50px;
+    color: #000080;
+    margin-left: 2px;
+  }
+  .para {
+    font-family: "Slate Pro Medium";
+    font-size: 25px;
+    margin-left: 30px;
+    font-size: 16px;
+  }
+  h3 {
+    font-family: "Slate Pro Medium";
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 45px;
+  }
+  .heading {
+    font-family: "Slate Pro Medium";
+    color: #34478f;
+    font-weight: bold;
+  }
+  .card1 {
+    height: 85px;
+  }
+  .card2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .claimpart {
+    border-radius: 5px 0px 0px 5px;
+    background-color: #4072c9;
+    height: 135px;
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  .example {
+    margin-left: 40px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
+    height: 135px;
+    width: 95%;
+  }
+  .maindiv {
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  .divcontent {
+    font-family: "Slate Pro Medium";
+    font-size: 16px;
+    padding: 30px;
+  }
+  
+  .dropdown {
+    font-family: "Slate Pro Medium";
+    font-size: 20px;
+    border: 0px;
+    background: none;
+    font-weight: bold;
+    color: #3f70d1;
+  }
+  .vertical_line {
+    border-right: 2px solid lightgray;
+  }
+  
+  ::placeholder {
+    color: lightgray;
+  }
+  .find_your_claim {
+    margin-left: 45px;
+    font-weight: bold;
+    color: #34478f;
+    font-size: 16px;
+  }
+  .find_your_claim_content {
+    font-size: 16px;
+    margin-left: 45px;
+  }
+  .claim_number_input_box {
+    margin-right: 336px;
+    float: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #34478f;
+    margin-top: -5px;
+  }
+  .search-btn {
+    float: right;
+    margin-right: -413px;
+    margin-top: -5px;
+    font-family: "Slate Pro Medium";
+    border: none;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    border-radius: 5px;
+    background-image: linear-gradient(#cc0000 50%, #990000 50%);
+  }
+  
+  @media screen and (max-width: 1021px) {
+    .example {
+      height: auto;
+    }
+    .card1 {
+      height: auto;
+    }
+    .claimpart {
+      height: auto;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .example {
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+      border-radius:0px 0px 5px 5px;
+    }
+    .claim-number{
+      font-size:17px;
+      padding: 5px;
+    }
+  .divcontent{
+    padding: 11px 0px 0px 25px;
+  }
+    h3 {
+      margin-left: 28px;
+      font-size: 15px;
+    }
+    .verticalbar {
+      display: none;
+    }
+    .dropdown {
+      font-size: 13px;
+      margin-left: 25px;
+    }
+    .claimpart {
+      width: 93%;
+      border-radius: 5px 5px 0px 0px;
+    }
+    .claim_number_input_box {
+      margin-right: 21%;
+      margin-top: 7px;
+    }
+    .search-btn {
+      margin-right: 27%;
+      margin-top: 13px;
+    }
+    .back_to_my_account_homepage {
+      margin-left: 12px;
+    }
+    .welcome {
+      margin-left: 15px;
+    }
+    .content {
+      margin-left: 2px;
+    }
+    .para {
+      margin-left: 15px;
+    }
+    .submitclaim-btn {
+      margin-left: 15px;
+    }
+    .find_your_claim {
+      margin-left: 35px;
+    }
+    .find_your_claim_content {
+      margin-left: 35px;
+    }
+    .vertical_line {
+      border-right: none;
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    .claimpart {
+      height: 265px;
+    }
+    .example {
+      margin-right: 40px;
+      height: 265px;
+    }
+    .abc {
+      width: 95%;
+    }
+  }

@@ -1,0 +1,132 @@
+<template>
+    <div class="maindiv" style={backgroundStyle}>
+        <a class="back_to_my_account_homepage" href="#">
+            <lightning-icon variant=brand icon-name="utility:chevronleft" size="xx-small"></lightning-icon> Back to My
+            Account Homepage
+        </a>
+        <h1 class="welcome">
+            Welcome, <br />
+            <p class="content"><b>John Smith</b></p>
+        </h1>
+        <p class="para">
+            Here you have easy access to all your claims information.You can<br />
+            review details,check status or see payments by clicking on any<br />
+            claim number in the table below. You can also submit a new claim
+        </p>
+        <br />
+        <lightning-layout horizontal-align="spread" multiple-rows="true">
+            <lightning-layout-item flexibility="grow" size="12" small-device-size="4" medium-device-size="6"
+                large-device-size="8">
+                <button class="submitclaim-btn" onclick={submitClaim}>REPORT A NEW CLAIM</button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <br /><br />
+
+        <div class="slds-grid slds-gutters slds-wrap">
+            <div class=" slds-size_1-of-1 slds-small-size_1-of-4 slds-large-size_1-of-4 vertical_line">
+                <h3>You have {count} {label}</h3>
+            </div>
+            <div class=" slds-size_1-of-1 slds-small-size_3-of-4 slds-large-size_3-of-4">
+                <select class="dropdown" name="all claims" onclick={handleClaims}>
+                    <template for:each={uniqueArray} for:item="opt">
+                        <option key={opt.key} value={opt.label}>{opt}</option>
+                    </template>
+                </select>
+            </div>
+        </div>
+
+        <br />
+
+
+        <template if:false={flag}>
+        <template for:each={openClaims} for:item="claim">
+            <div key={claim}>
+        <table  class="claim_table" >
+            <tr>
+                <td style="background-color: blue;" >Claim #</td>
+                <td class="claim_heading">{claim.displayType}</td>
+                <td class="claim_heading" >Policy type</td>
+                <td class="claim_heading" >Date of Loss</td>
+                <td class="claim_heading" >Notification</td>
+              </tr>
+                <tr>
+                <td style="background-color: blue;">{claim.claimNumber}</td>
+                <td class="claim_heading">{claim.property}</td>
+                <td class="claim_heading">{claim.policyType}</td>
+                <td class="claim_heading">{claim.lossDate}</td>
+                <td class="claim_heading">{claim.notification}</td>
+              </tr>
+            </table> <br>
+         </div>
+        </template>
+     
+    </template>
+
+
+    </div>
+</template>
+
+
+
+
+
+
+
+
+
+
+        <!--
+        <template if:false={flag}>
+            <template for:each={openClaims} for:item="claim">
+                <div key={claim} class="abc">
+                    <lightning-tile class="example" variant="brand">
+                        <div class="card1">
+                            <div class="slds-grid slds-gutters slds-wrap">
+                                <div onclick={claimClick} class=" slds-align_absolute-center slds-col slds-size_1-of-1 slds-small-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5 claimpart">
+                                    <center>
+                                        <p class="claim-number">CLAIM #<br /><b>{claim.claimNumber}</b></p>
+                                    </center>
+                                </div>
+                                <div class=" slds-size_1-of-1 slds-small-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5 divcontent ">
+                                    <p class="heading">{claim.displayType}</p>
+                                    <p class="values">{claim.property}</p>
+                                    <p>{claim.street}, {claim.zipCode}</p>
+                                </div>
+                                <div class="slds-size_1-of-1 slds-small-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5 divcontent">
+                                    <p class="heading">Policy Type</p>
+                                    <p>{claim.policyType}</p>
+                                </div>
+                                <div class="slds-size_1-of-1 slds-small-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5 divcontent">
+                                    <p class="heading">Date of Loss</p>
+                                    <p>{claim.lossDate}</p>
+                                </div>
+                                <div class=" slds-size_1-of-1 slds-small-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5 divcontent">
+                                    <p class="heading"><img src={notification} />Notification</p>
+                                    <p>The claim have been credited to your bank account</p>
+                                    <a>{claim.notification}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </lightning-tile><br />
+                </div>
+            </template>
+
+
+
+
+            <div class="slds-grid slds-gutters slds-wrap">
+                <div class="slds-size_1-of-1 slds-small-size_1-of-2 slds-large-size_1-of-2">
+                    <p class="find_your_claim">Can't find your claim?</p>
+                    <p class="find_your_claim_content">If an existing claim with us isn't listed here, you can add it.
+                    </p>
+                </div>
+                <div class="slds-size_1-of-1 slds-small-size_1-of-2 slds-large-size_1-of-2">
+                    <input class="claim_number_input_box" type="text"
+                        placeholder="What is the claim number?" />&nbsp;&nbsp;&nbsp;
+                    <button class="search-btn">SEARCH</button>
+                </div>
+            </div>
+            <br>
+            <c-footer-temp></c-footer-temp>
+        </template>
+        -->

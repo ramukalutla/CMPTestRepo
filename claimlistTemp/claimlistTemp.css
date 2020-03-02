@@ -1,0 +1,104 @@
+.submitclaim-btn {
+    border: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.8;
+    border-radius: 5px;
+    background-image: linear-gradient(#cc0000 50%, #990000 50%);
+  }
+  a:link {
+    text-decoration: none;
+  }
+  
+  .welcome {
+    font-size: 30px;
+  
+    color: #000080;
+  }
+  .view-claims {
+    color: #4da6ff;
+  }
+  .link {
+    border-left: 1px solid gray;
+    height: 15px;
+  }
+  .content {
+    font-size: 40px;
+    color: #000080;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .heading {
+    color: #000080;
+    font-weight: bold;
+  }
+  .backgroundStyle {
+    background-image: url("${image1}");
+  }
+  .card1 {
+    height: 85px;
+  }
+  .card2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .claimpart {
+      border-radius: 5px 0px 0px 5px;
+      background-color: #3f70d1;
+      height: 120px;
+      margin-top: 0;
+      margin-bottom: 5px;
+      margin-left: 12px;
+      margin-right: -8px;
+      color: #fff;
+  }
+  .example{
+      margin-left: 30px;
+      border-radius:0px 5px 5px 0px;
+      background-color: white;
+      height: 120px;
+      width:95%;
+  }
+  .maindiv{
+          word-break: break-word;
+          word-wrap: break-word;
+  }
+  .divcontent{
+      padding: 30px;
+  }
+  
+  .dropdown{
+    border: 0px;
+    background:none;
+    font-weight: bold;
+    color:#3f70d1;
+    
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+  option{
+    padding: 5px;
+  }
+  
+  @media screen and (max-width: 1021px) {
+    .example {
+      height: auto;
+    }
+    .card1 {
+      height: auto;
+    }
+    .claimpart{
+      height: auto;
+    }
+  }

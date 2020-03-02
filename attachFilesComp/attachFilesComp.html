@@ -1,0 +1,35 @@
+<template>
+    <!--<lightning-card class="updload-doucment">-->
+	<div class="slds-card updload-doucment" >
+        <header class="slds-card__header slds-grid ud-header"><div class="slds-media slds-media_center slds-has-flexi-truncate"><div class="slds-media__body slds-truncate"><h2><span class="slds-text-heading_small">Upload Documents</span></h2></div></div><div class="slds-no-flex"><slot name="actions"></slot></div></header>
+        <div class="slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-around_small uploaddiv">
+                    <div class="slds-box slds-form-element__control slds-file-selector__dropzone slds-has-drag-over boxStyle">
+                        <lightning-file-upload name="fileUploader" title="upload files" accept={acceptedFormats}
+                            record-id={recordId} onuploadfinished={handleUploadFinished} multiple>
+                        </lightning-file-upload><b>Maximum size is 20MB, Once after uploading file please select
+                            File Type and click on "CLICK TO SAVE" to store your preference..</b>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-small-size_1-of-2 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-around_small doctypediv"
+                    if:true={selectOptionsFlag}>
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <template if:true={docData}>
+                            <template for:each={docData} for:item="res">
+                                <p key={res.Id}>
+                                    <lightning-combobox placeholder="Select a Document Type" name="progress"
+                                        label={res.Name} options={options} onchange={selecteOptions} id={res.Id} required>
+                                    </lightning-combobox>
+                                </p>
+                            </template>
+                        </template>
+                        <lightning-button variant="brand" label="CLICK TO SAVE" onclick={updateSelectedRecords} disabled={buttonflag}>
+                        </lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--</lightning-card>-->
+</template>

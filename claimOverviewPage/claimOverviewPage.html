@@ -1,0 +1,85 @@
+<template>
+    
+        <div class="container-div" style="padding: 0px 20px 30px 20px;">
+            <div class="Overview">OVERVIEW</div>
+            <div class="Separator_Line"></div>
+            <lightning-layout vertical-align="center">
+                <div class="slds-grid slds-grid_vertical">
+                    <template for:each={resData} for:item="res1">
+                        <div key={res1} class="slds-col slds-p-around_xxx-small">
+                            <div class="heading1">Claims Details</div>
+                            <div class="subheading1">Claim #:<span class="details1">
+                                    {res1.claimNumber}</span></div>
+                            <div class="subheading1">Date of Loss: <span
+                                    class="details1">{res1.whenandwhatmap.myDatetimeStr} </span></div>
+                            <div class="subheading1">Location of Loss: </div>
+                            <span class="details1">{res1.whenandwhatmap.lossLocation}</span>
+                        </div>
+                    </template>
+                    <hr class="hr2">
+                    <template for:each={resData} for:item="res1">
+                        <div key={res1} class="slds-col slds-p-around_xxx-small">
+                            <div class="heading1">Contact</div>
+                            <!-- Claim Representative -->
+                            <div class="subheading1">Claims Representative: </div>
+                            <span if:true={showClaimRep}
+                                class="details1">{res1.CRBasedonOMFlagMap.claimRepresentative.fullName} <br />
+                                Call or Text {res1.CRBasedonOMFlagMap.claimRepresentative.phone} </span>
+                            <!--    Claim Type -->
+                            <span if:true={showClaimType}
+                                class="details1">{res1.CRBasedonOMFlagMap.claimRepresentative.fullName} <br />
+                                Call or Text {res1.CRBasedonOMFlagMap.claimRepresentative.phone} </span>
+                            <!--   Medical Representative -->
+                            <span if:true={showClaimType}
+                                class="details1">{res1.CRBasedonOMFlagMap.claimRepresentative.fullName} <br />
+                                Call or Text {res1.CRBasedonOMFlagMap.claimRepresentative.phone} </span>
+                            <!-- Supervisor -->
+                            <div if:true={showSupervisor} class="subheading1">Supervisor: </div>
+                            <span if:true={showSupervisor}
+                                class="details1">{res1.CRBasedonOMFlagMap.claimRepresentative.supFirstName}
+                                {res1.CRBasedonOMFlagMap.claimRepresentative.supLastName} |
+                                {res1.CRBasedonOMFlagMap.claimRepresentative.phone}</span>
+                        </div>
+                    </template>
+                    <hr class="hr2">
+                    <div class="slds-col slds-p-around_xxx-small">
+                        <div class="heading1">Preferences</div>
+                        <div if:true={emailCorrespondence} class="subheading1">Email correspondence: </div>
+                        <span if:true={emailIfYes} class="details1">You are signed up to receive <br /> your claim
+                            documents via
+                            email.</span>
+                        <lightning-input if:true={emailIfNull} type="checkbox" class="details1" name="emailCheckbox"
+                            onchange={handleEmailOpt}
+                            label="Would you like to get information about your claim by email?By checking the box to receive electronic correspondence, I acknowledge that I have read and agree to E-Delivery Terms and Conditions and will receive claims correspondence via E-mail.">
+                        </lightning-input>
+                        <div if:true={textMessaging} class="subheading1">Text messaging: </div>
+                        <span if:true={textIfYes} class="details1">You are signed up to receive text messages about your
+                            claim.</span>
+
+                        <lightning-input if:true={textIfNull} type="checkbox" class="checkboxText" name="textCheckbox"
+                            onchange={handleTextOpt}
+                            label="I would like to signup to receive text messages and updates about my claim">
+                        </lightning-input>
+                        <!--<span class="details1">I would like to signup to receive text messages and updates about my claim</span>
+                        </div>-->
+                        <!--<input if:true={textIfNull} type="checkbox" class="checkbox_click" name="textCheckbox"
+                            onchange={handleTextOpt}><h1 class="details2">I would like to signup to receive text messages and updates about my claim</h1></input>-->
+
+                    </div>
+                    <div>
+                        <button class="savePreferencesBtn" onclick={savePreferencesClick}>SAVE PREFERENCES</button>
+                    </div>
+                    <hr class="hr2">
+                    <div>
+                        <div class="heading1">Set Up Direct Deposit </div>
+                        <div class="details1">Receive payments faster by using direct deposit instead of paper mail.
+                        </div>
+                    </div>
+                    <div><button class="savePreferencesBtn" onclick={signUpButton}>SIGN ME UP NOW</button></div>
+                    <div><button class="savePreferencesBtn" onclick={reviewMySelectionButton}>REVIEW MY
+                            SELECTION</button></div>
+                </div>
+            </lightning-layout>
+        </div>
+   
+</template>

@@ -1,0 +1,84 @@
+.container-div
+{   
+    width: auto;
+}
+.Overview {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: "Slate Pro";
+    color: rgb(0, 48, 135);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 5px;
+    z-index: 161;
+  }
+.Separator_Line {
+    background-color: rgb(0, 48, 135);
+    height: 1.5px;
+    z-index: 160;
+  }
+.hr2 
+{
+    border-style:dashed;
+    color:gray;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+.heading1
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Slate Pro";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+    padding-top:5px;
+}
+.subheading1
+{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Slate Pro";
+    color: rgb(0, 48, 135);
+    line-height: 1.2;
+    text-align: left;
+    padding-top:5px;  
+}
+.details1
+{
+    font-size: 18px;
+    font-weight: normal;
+    font-family: "Slate Pro";
+    color: black;
+    line-height: 1.2;
+    text-align: left;
+}
+.checkbox_click{
+    margin-top:19px;
+}
+
+.savePreferencesBtn
+{
+    font-size: 20px;
+    font-weight:bold;
+    font-family: "Slate Pro";
+    color: rgb(0, 115, 207);
+    line-height: 0.9;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(182, 182, 182);
+    border-radius: 5px;
+    background-color:white;
+    width: 220px;
+    height: 32px;
+    margin:13px;
+    margin-left:0px;
+}
+
+
+.layout1
+{
+    padding-left:15px;
+}
