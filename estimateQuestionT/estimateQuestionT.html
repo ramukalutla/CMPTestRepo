@@ -1,0 +1,37 @@
+<template>
+        <template if:true={questionFlag}>
+    <div class="main_component">
+                <div class="heading">
+                    <h1 class="estimate-heading">ESTIMATE QUESTIONS</h1>
+                </div>
+        <br>
+        <div class="slds-grid slds-gutters slds-wrap">
+            <div class="slds-col  slds-size_3-of-3 slds-small-size_2-of-3 slds-large-size_2-of-3 slds-p-top_medium">
+                <template for:each={estimateMetaData} for:item="data1">
+                    <div key={data1.Id} class="question_answer_div">
+                        <p class="question">{data1.Question__c}</p>
+                        <!--<p class="answer">{data1.Answer__c}</p>-->
+                        <lightning-formatted-rich-text class="answer" value={data1.Answer__c}>{data1.Answer__c}
+                            </lightning-formatted-rich-text>
+                    </div>
+                </template>
+            </div>
+            <div class="slds-col  slds-size_3-of-3 slds-small-size_1-of-3 slds-large-size_1-of-3 slds-p-top_x-large">
+                <div class="right-content">
+                    <p class="r1"><b>Still not sure?</b></p>
+                    <p class="r3">If you still have questions and want to discuss more, before you make a decision, you can connect
+                        with your Claims Representative.</p><br>
+                    <p class="r2">Laura Hsieh-DeGnore</p>
+                    <p class="r4">(617)669-1358</p>
+                </div>
+            </div>
+        </div><br>
+
+    </div>
+    <div class="second_section">
+        <div class="backbtn-div">
+            <button class="back-btn" onclick={redirectDashboard}>Back</button>
+        </div>
+    </div>
+</template>
+</template>

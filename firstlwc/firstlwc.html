@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="LWC DATA" icon-name="custom:custom14">
+
+        <template for:each={dataReturned} for:item="hoseHoldpolicy">
+            <template for:each={hoseHoldpolicy.basicPolicy} for:item="basePolicy" for:index="currentIteration">
+                POLICY INFO Iteration No Is {currentIteration}
+
+                <p key={basePolicy.policyNumber}>
+                    <strong>{basePolicy.policyNumber}</strong><br />
+                    <strong>{basePolicy.policySourceSystem}</strong><br />
+                    <strong>{basePolicy.policyStateCode}</strong><br />
+                    <strong>{basePolicy.policyStatus}</strong><br />
+                    <strong>{basePolicy.policyType}</strong><br />
+                    <strong>{basePolicy.RolledOutIndicator}</strong><br />
+                    <strong>{basePolicy.subType}</strong><br />
+                </p>
+                <template for:each={basePolicy.agentContactView} for:item="agentContactViewItarator"
+                    for:index="currentIterationIndex">
+                    AGENT INFO : AGENT CONTACT VIEW AND ITERATION NO IS :{currentIterationIndex}
+                    <p key={agentContactViewItarator.agentCode}>
+                        <strong>{agentContactViewItarator.agentCode}</strong><br />
+                        <strong>{agentContactViewItarator.agentDistrictCode}</strong><br />
+                        <strong>{agentContactViewItarator.agentStateCode}</strong><br />
+                        <strong>{agentContactViewItarator.captiveAgentIndicator}</strong><br />
+                    </p>
+                </template>
+            </template>
+            
+
+
+        </template>
+    </lightning-card>
+</template>

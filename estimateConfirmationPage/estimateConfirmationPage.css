@@ -1,0 +1,204 @@
+/* .main_div
+{
+    height: 605px;
+    WIDTH: 98%;
+    PADDING-LEFT: 25PX;
+    PADDING-TOP: 25PX;
+} */
+
+/* .heading{
+    height: 30px;
+    width: 100%;
+    background-color: white;
+   
+} */
+.estimate-heading {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px 0 10px 30px;
+  color: #000080;
+  /* background-color: white; */
+  border-bottom: 2px solid gray;
+}
+.estimate {
+  /* position: relative;
+    top: 28px;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    border-style: dashed;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent; */
+  padding: 30px 20px;
+  border-bottom: 2px solid dashed lightgray;
+}
+/*.estimate-image{
+    position: absolute;
+    right: 50%;
+    top: 50px;
+}*/
+.statement {
+  /* position: relative;
+    left: 350px;
+    top: 120px; */
+
+  font-weight: 900;
+  font-size: 22px;
+}
+.buttons-div {
+  /* position: relative;
+    top: 28px;
+    height: 300px;
+    width: 100%;
+    background-color: white; */
+  padding: 20px;
+}
+.input-column {
+  /*position: relative;
+    top: 15px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;  */
+  position: static;
+  width: 265px;
+  margin-top: -20px;
+}
+::placeholder {
+  color: lightgray;
+}
+.sendapp-btn {
+  /*  border: 1px solid black;*/
+  border: none;
+  margin-top: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  opacity: 0.8;
+  border-radius: 5px;
+  background-image: linear-gradient(#1782fb 50%, #0b3efe 50%);
+}
+.button.sendapp-btn:disabled {
+  border: none;
+  /* MARGIN-TOP: 50PX; */
+  /* padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom:7px; */
+  padding: 7px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  opacity: 0.2;
+  border-radius: 5px;
+  background-image: linear-gradient(#1782fb 50%, #0b3efe 50%);
+}
+.back-btn {
+  border: 1px solid lightgray;
+  font-weight: bold;
+  font-size: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: navy;
+  border-radius: 5px;
+  background-image: linear-gradient(white 50%, rgba(238, 237, 237, 0.884) 50%);
+}
+
+.btn-block {
+  margin-top: 50px;
+}
+.btn-block button {
+  margin: 0 20px;
+}
+/* @media screen and (max-width:300px){
+    .estimate,
+    .estimate-heading{width: 100%;font-size:12px;}
+} */
+
+/**************** MOBILE VIEW *****************/
+/* New Styles as on 12-11-2019 */
+.full-ie-block {width: 100%; align-items: initial; flex-flow: column;}
+@media screen and (max-width: 991px) {
+  .estimate-heading {
+    padding: 10px 10px 10px 20px;
+  }
+  .btn-block {
+    margin-top: 40px;
+  }
+  .input-column {
+    width: 285px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-block {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* .main_div{
+        padding-left: 10px;
+        padding-top: 10px;
+       padding-right: 4PX;
+       height: 565px;
+    } */
+  /* .estimate{
+        top: 65px;
+    } */
+  /* .estimate-image{
+        margin-left: -45px;
+        top:25px;
+    } */
+  /* .statement{
+        top: 95px;
+    } */
+  /* .sendapp-btn{
+        MARGIN-TOP: 10PX;
+    MARGIN-LEFT: 42PX;
+    margin-bottom: 10px;
+    } */
+  /* .back-btn{
+        MARGIN-LEFT: 0PX;
+    } */
+  /* .input-column{
+        margin-top: -10px;
+    } */
+  .slds-input,
+  .input-column {
+    width: 100%;
+  }
+
+  .buttons-div {
+    /* top: 65px;
+    height: 250px; */
+    padding: 10px 10px 0;
+  }
+  .estimate-heading {
+    padding: 10px 10px 10px 10px;
+  }
+  .btn-block {
+    margin-top: 20px;
+    line-height: 0;;
+  }
+  .btn-block button {
+    width: 100%;
+    margin: 10px 0;
+    line-height: 18px;
+  }
+  
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .estimate-img-block {
+    display: block;
+  }
+  .full-ie-block {
+    display: block;
+  }
+}

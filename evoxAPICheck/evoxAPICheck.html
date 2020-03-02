@@ -1,0 +1,22 @@
+<template>
+    <!--lightning-input type="text" name="reAccountNumber" min="0" label="Check onblur fucnction"
+									minlength={minlength} maxlength={maxlength} 
+									message-when-value-missing='Test 12345' pattern="^[0-9]*$"
+									message-when-pattern-mismatch="Invalid input. Please enter digits."
+									onchange={handleChange1} onfocus={handleAccountImage} onblur={checkAccountNumber} 
+									aria-label="Re-enter account number" variant="label-hidden" onpaste={handlePaste} oncopy ={handlePaste} data-id="selector" required >
+</lightning-input-->
+<div if:true={showSample}>
+<lightning-input type="text" label="Test1">
+</lightning-input>
+<lightning-input type="text" label="Test2">
+</lightning-input>
+<lightning-input type="text" label="Test3">
+</lightning-input>
+<lightning-input type="text" label="Test4">
+</lightning-input>
+<lightning-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+</div>
+
+
+</template>
